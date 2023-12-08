@@ -13,11 +13,16 @@
       type="text"
       placeholder="Описание"
     />
-    <button class="btn" @click="createPosts">Создать</button>
+    <my-button  @click="createPosts" 
+	 style="align-self: flex-end; margin-top: 15px"
+      >Создать</my-button
+    >
   </form>
 </template>
 <script>
+import MyButton from "@/components/UI/MyButton";
 export default {
+  components: { MyButton },
   data() {
     return {
       post: {
@@ -44,14 +49,7 @@ form {
   flex-direction: column;
 }
 
-.btn {
-  margin-top: 15px;
-  padding: 10px 15px;
-  align-self: flex-end;
-  background: none;
-  color: teal;
-  border: 1px solid teal;
-}
+
 
 .input {
   width: 100%;
