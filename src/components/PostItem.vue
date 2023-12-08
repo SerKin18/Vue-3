@@ -4,15 +4,13 @@
       <div><strong>Название:</strong>{{ post.title }}</div>
       <div><strong>Описание:</strong>{{ post.body }}</div>
     </div>
-	 <div class="post__btn">
-		<my-button>Удалить</my-button>
-	 </div>
+    <div class="post__btn">
+      <my-button @click="$emit('remove', post)">Удалить</my-button>
+    </div>
   </div>
 </template>
 <script>
-
 export default {
-
   props: {
     post: {
       type: Object,
